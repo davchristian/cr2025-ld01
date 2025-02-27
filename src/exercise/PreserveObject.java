@@ -6,14 +6,12 @@ public class PreserveObject {
 
 		public Room(int lowest, int highest) {
 			this.lowest = lowest;
-			this.highest = highest;
+			this.highest = highest;	
 		}
 
 		// TODO: replace low & high in this withinPlan with preserve whole object
 		public boolean withinPlan(HeatingPlan plan) {
-			int low = getLowestTemp();
-			int high = getHighestTemp();
-			return plan.withinRange(low, high);
+			return plan.withinRange(getLowestTemp(), getHighestTemp());
 		}
 
 		private int getHighestTemp() {
